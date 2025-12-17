@@ -39,7 +39,7 @@ Ukupno kombinacija (39C7): 15380937
 # CSV file with header
 
 # Učitavanje CSV fajla sa headerom
-csv_path = "/Users/milan/Desktop/GHQ/data/loto7h_4530_k99.csv"
+csv_path = "/data/loto7h_4530_k99.csv"
 df_csv = pd.read_csv(csv_path)
 
 print()
@@ -446,7 +446,7 @@ def draw_snapshot(i):
 ani = animation.FuncAnimation(fig, draw_snapshot, frames=20, interval=200, repeat=False)
 
 # Save as GIF with PillowWriter
-ani.save("/Users/milan/Desktop/GHQ/forsing/QP/dynamic/animated_web.gif", writer='pillow', fps=5)
+ani.save("/animated_web.gif", writer='pillow', fps=5)
 plt.show()
 """
 (A GIF file named "animated_web.gif" will be created 
@@ -460,7 +460,7 @@ net = Network(height='800px', width='100%', notebook=False, directed=False)
 
 # === VISUALIZE ===
 net.toggle_physics(True)
-net.write_html("/Users/milan/Desktop/GHQ/forsing/QP/dynamic/predicted_net.html", open_browser=True)
+net.write_html("/predicted_net.html", open_browser=True)
 """
 An HTML file named "predicted_net.html" will be created 
 and opened in the browser,
@@ -497,7 +497,6 @@ model = node2vec.fit(window=5, min_count=1)
 
 # Key string in embedding
 embedding = {str(node): model.wv[str(node)] for node in G_train.nodes()}
-
 
 
 # ----------------- STEP 4: Positive and negative copies-----------------
@@ -576,7 +575,7 @@ X_edges = X_edges.values
 X_edges = pd.DataFrame(X_edges, columns=['cn', 'jc', 'aa', 'pa'])
 df_edges['score'] = reg_struct_1.predict(X_edges)
 """
-Ako je tvoja 7-grana bazirana na CN / JC / AA / PA 
+Ako je 7-grana bazirana na CN / JC / AA / PA 
 (što trenutno jeste), koristi reg_struct_1 strukturni model:
 """
 
@@ -621,6 +620,7 @@ for combo in combinations(candidate_nodes, 7):
         best_combo = combo
 
 
+
 # Pretvaranje u int
 best_combo_int = tuple(int(x) for x in best_combo)
 print()
@@ -630,6 +630,6 @@ print("Skor:", best_score)
 print()
 """
 PREDIKCIJA SLEDEĆE 7-ČLANE GRANE:
-(1, 2, 3, 6, 8, 9, 10)
+(1, 2, x, y, z, 9, 10)
 Skor: 0.02712301587301588
 """
