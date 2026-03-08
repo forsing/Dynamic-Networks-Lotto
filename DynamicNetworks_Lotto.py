@@ -3,6 +3,12 @@
 # Regressor
 
 
+
+# https://graphsinspace.net
+# https://tigraphs.pmf.uns.ac.rs
+
+
+
 import pandas as pd
 import numpy as np
 
