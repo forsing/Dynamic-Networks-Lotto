@@ -1,7 +1,5 @@
 # Dynamic Networks 
 # Link Prediction 
-# Regressor
-
 
 
 # https://graphsinspace.net
