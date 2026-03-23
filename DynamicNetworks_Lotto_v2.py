@@ -51,7 +51,7 @@ warnings.filterwarnings("ignore", category=FutureWarning)
 # ---------------------------------------------------------------------------
 # Podrazumevane putanje i hiperparametri (podešavanje predikcije)
 # ---------------------------------------------------------------------------
-DEFAULT_CSV = Path("/Users/4c/Desktop/GHQ/data/loto7hh_4584_k23.csv")
+DEFAULT_CSV = Path("/data/loto7hh_4584_k23.csv")
 SEED = 39
 DECAY = 0.999
 TOP_NODES_FOR_COMBO = 16
@@ -418,7 +418,7 @@ Computing transition probabilities: 100%|█| 39/39 [00:00<00:00
 Generating walks (CPU: 1): 100%|█| 80/80 [00:00<00:00, 366.99i
 
 --- PREDIKCIJA SLEDEĆE KOMBINACIJE (sedmorka) ---
-[4, 11, 17, 21, 30, 32, 37]
+[4, x, 17, y, 30, z, 37]
 Srednji ensemble skor (parovi u kombinaciji): 0.462697
 """
 
